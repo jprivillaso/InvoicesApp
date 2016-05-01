@@ -1,0 +1,42 @@
+#invoiceFormContainer{
+  margin-top: 20px;
+}
+
+.input-group-addon:first-child {
+    width: 125px;
+    text-align: right;
+}
+
+#calculatedTotal, #calculatedTotalText {
+  float: left;
+}
+
+#calculatedTotal {
+  border-right: 1px solid #ccc;
+  width: 126px;
+}
+
+#calculatedTotalText{
+  padding-top: 6px;
+  margin-left: 10px;
+  font-family: inherit;
+}
+
+#addProductIcon{
+  position: absolute;
+  margin-left: 10px;
+  top: 10px;
+}
+
+label{
+  font-weight: normal !important;
+}
+
+input.quantitySelector {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.productRow.ng-scope {
+    padding: 10px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invoices App</title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="js/lib/angular-multiselect/isteven.css"></script>
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <script type="text/javascript" src="js/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular/angular-route.js"></script>
+  </head>
+  <body ng-app="myApp">
+
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/">Invoice App</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#/products">Products</a></li>
+            <li><a href="#/customers">Customers</a></li>
+            <li><a href="#/invoices">Invoices</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="view" ng-view>
+      </div>
+    </div> <!-- /container -->
+
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="/js/app.js"></script>
+    <!-- Vendor Scripts -->
+    <script type="text/javascript" src="js/lib/angular-multiselect/isteven.js"></script>
+    <script type="text/javascript" src="/js/lib/lodash/lodash.min.js"></script>
+    <script type="text/javascript" src="/js/lib/jquery/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="/js/controllers/GlobalController.js"></script>
+    <script type="text/javascript" src="/js/controllers/CustomersController.js"></script>
+    <script type="text/javascript" src="/js/controllers/ProductsController.js"></script>
+    <script type="text/javascript" src="/js/controllers/InvoicesController.js"></script>
+    <script type="text/javascript" src="/js/controllers/InvoiceItemController.js"></script>
+    <!-- Services -->
+    <script type="text/javascript" src="/js/services/CustomersService.js"></script>
+    <script type="text/javascript" src="/js/services/ProductsService.js"></script>
+    <script type="text/javascript" src="/js/services/InvoicesService.js"></script>
+    <script type="text/javascript" src="/js/services/InvoiceItemService.js"></script>
+  </body>
+</html>

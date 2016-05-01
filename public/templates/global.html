@@ -1,0 +1,39 @@
+<div id="globalController" ng-controller="GlobalController">
+
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="invoice in invoices" ng-click="loadInvoice()">Invoice number {{invoice.id}}</li>
+  </ul>
+
+  <div>
+    <button id="createInvoice" ng-click="hideForm(); createInvoice();">Create Invoice</button>
+  </div>
+
+  <div id="invoiceFormContainer" ng-hide="formHidden">
+    <p>Create Invoice</p>
+    <form id="invoiceForm">
+      <div class="input-group">
+        <span class="input-group-addon" id="customer">Customer</span>
+        <select class="form-control" placeholder="Customer" aria-describedby="customer" ng-model="customer" ng-change="updateInvoice()" ng-options="customer.name for customer in customers"></select>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon" id="product">Product</span>
+        <div isteven-multi-select input-model="products" output-model="selectedProducts"
+          button-label="icon name" item-label="icon name maker" tick-property="ticked">
+        </div>
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon" id="discount">Discount</span>
+        <input type="text" class="form-control" ng-model="discount" ng-change="updateTotal()" placeholder="Discount (%)" aria-describedby="discount" ng-bind="discount" />
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon" id="total">Total</span>
+        <input type="text" class="form-control" placeholder="Total" aria-describedby="total" ng-model="total" ng-change="updateTotal()" />
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon" id="calculatedTotal">Calculated Total</span>
+        <p id="calculatedTotalText" ng-bind="calculatedTotal"></p>
+      </div>
+    </form>
+  </div>
+
+</div>

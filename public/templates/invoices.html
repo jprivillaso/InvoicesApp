@@ -1,0 +1,12 @@
+<div id="invoicesController">
+
+  <h3>Invoices</h3>
+  <ul class="list-group" ng-controller="InvoicesController">
+    <li class="list-group-item" ng-repeat="invoice in invoices">
+      <p>Customer: {{invoice.customer_id}}</p>
+      <p>Discount: {{invoice.discount}} %</p>
+      <p>Total:    {{invoice.total    | currency:"$USD "}}</p>
+    </li>
+  </ul>
+
+</div>
